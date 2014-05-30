@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B2223F719387FAA009C489B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B2223F619387FAA009C489B /* Crashlytics.framework */; };
 		2B24EF01193783AB0084BEDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24EF00193783AB0084BEDF /* Foundation.framework */; };
 		2B24EF03193783AB0084BEDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24EF02193783AB0084BEDF /* CoreGraphics.framework */; };
 		2B24EF05193783AB0084BEDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B24EF04193783AB0084BEDF /* UIKit.framework */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B2223F619387FAA009C489B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		2B24EEFD193783AB0084BEDF /* NSThreadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSThreadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B24EF00193783AB0084BEDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B24EF02193783AB0084BEDF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,6 +64,7 @@
 			files = (
 				2B24EF03193783AB0084BEDF /* CoreGraphics.framework in Frameworks */,
 				2B24EF05193783AB0084BEDF /* UIKit.framework in Frameworks */,
+				2B2223F719387FAA009C489B /* Crashlytics.framework in Frameworks */,
 				2B24EF01193783AB0084BEDF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +104,7 @@
 		2B24EEFF193783AB0084BEDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B2223F619387FAA009C489B /* Crashlytics.framework */,
 				2B24EF00193783AB0084BEDF /* Foundation.framework */,
 				2B24EF02193783AB0084BEDF /* CoreGraphics.framework */,
 				2B24EF04193783AB0084BEDF /* UIKit.framework */,
@@ -161,6 +165,7 @@
 				2B24EEF9193783AB0084BEDF /* Sources */,
 				2B24EEFA193783AB0084BEDF /* Frameworks */,
 				2B24EEFB193783AB0084BEDF /* Resources */,
+				2B2223F519387F7D009C489B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -245,6 +250,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B2223F519387F7D009C489B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 5d2ba42acc34e1d88ab442bbb8c0f6692c0db723 7e466575fcdafe63cf5e43e18f156e9a4fea2a8d56506ec1b4d1e4f20b961f73";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2B24EEF9193783AB0084BEDF /* Sources */ = {
@@ -373,6 +394,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSThreadDemo/NSThreadDemo-Prefix.pch";
 				INFOPLIST_FILE = "NSThreadDemo/NSThreadDemo-Info.plist";
@@ -387,6 +412,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NSThreadDemo/NSThreadDemo-Prefix.pch";
 				INFOPLIST_FILE = "NSThreadDemo/NSThreadDemo-Info.plist";
@@ -454,6 +483,7 @@
 				2B24EF2B193783AC0084BEDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B24EF2C193783AC0084BEDF /* Build configuration list for PBXNativeTarget "NSThreadDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +492,7 @@
 				2B24EF2E193783AC0084BEDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
